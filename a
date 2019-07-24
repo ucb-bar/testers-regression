@@ -1,0 +1,123 @@
+[0m[[0m[0minfo[0m] [0m[0mLoading global plugins from /Users/chick/.sbt/1.0/plugins[0m
+[0m[[0m[0minfo[0m] [0m[0mLoading settings from plugins.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mLoading project definition from /Users/chick/Adept/dev/masters/chisel-template/project[0m
+[0m[[0m[0minfo[0m] [0m[0mLoading settings from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mSet current project to testers-regression (in build file:/Users/chick/Adept/dev/masters/chisel-template/)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to /Users/chick/Adept/dev/masters/chisel-template/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 2 Scala sources to /Users/chick/Adept/dev/masters/chisel-template/target/scala-2.12/test-classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[[35minfo[0m] [0.002] Elaborating design...
+[[35minfo[0m] [0.002] Elaborating design...
+[[35minfo[0m] [0.000] Elaborating design...
+[[35minfo[0m] [0.172] Done elaborating.
+[[35minfo[0m] [0.038] Done elaborating.
+[[35minfo[0m] [0.172] Done elaborating.
+[[35minfo[0m] [0.000] Elaborating design...
+[[35minfo[0m] [0.000] Elaborating design...
+[[35minfo[0m] [0.012] Done elaborating.
+[[35minfo[0m] [0.012] Done elaborating.
+Total FIRRTL Compile Time: 242.4 ms
+file loaded in 0.060871063 seconds, 48 symbols, 42 statements
+file loaded in 0.060952069 seconds, 48 symbols, 42 statements
+file loaded in 0.060965025 seconds, 61 symbols, 55 statements
+[[35minfo[0m] [0.001] SEED 1563993171995
+:::::: testers gcd treadle                         0.55285 seconds
+test DecoupledGcd Success: 20000 tests passed in 175440 cycles in 0.571078 seconds 307208.73 Hz
+[[35minfo[0m] [0.560] RAN 175435 CYCLES PASSED
+[[35minfo[0m] [0.000] Elaborating design...
+[[35minfo[0m] [0.007] Done elaborating.
+Total FIRRTL Compile Time: 117.6 ms
+cd /Users/chick/Adept/dev/masters/chisel-template/test_run_dir/gcd.GcdTestersRegression2106560942 && verilator --cc DecoupledGcd.v --assert -Wno-fatal -Wno-WIDTH -Wno-STMTDLY -O1 --top-module DecoupledGcd +define+TOP_TYPE=VDecoupledGcd +define+PRINTF_COND=!DecoupledGcd.reset +define+STOP_COND=!DecoupledGcd.reset -CFLAGS "-Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h" -Mdir /Users/chick/Adept/dev/masters/chisel-template/test_run_dir/gcd.GcdTestersRegression2106560942 --exe /Users/chick/Adept/dev/masters/chisel-template/test_run_dir/gcd.GcdTestersRegression2106560942/DecoupledGcd-harness.cpp --trace
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o DecoupledGcd-harness.o /Users/chick/Adept/dev/masters/chisel-template/test_run_dir/gcd.GcdTestersRegression2106560942/DecoupledGcd-harness.cpp
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o verilated.o /usr/local/Cellar/verilator/4.016/share/verilator/include/verilated.cpp
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o verilated_vcd_c.o /usr/local/Cellar/verilator/4.016/share/verilator/include/verilated_vcd_c.cpp
+/usr/bin/perl /usr/local/Cellar/verilator/4.016/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include VDecoupledGcd.cpp > VDecoupledGcd__ALLcls.cpp
+/usr/bin/perl /usr/local/Cellar/verilator/4.016/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include VDecoupledGcd__Trace.cpp VDecoupledGcd__Syms.cpp VDecoupledGcd__Trace__Slow.cpp > VDecoupledGcd__ALLsup.cpp
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o VDecoupledGcd__ALLsup.o VDecoupledGcd__ALLsup.cpp
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o VDecoupledGcd__ALLcls.o VDecoupledGcd__ALLcls.cpp
+      Archiving VDecoupledGcd__ALL.a ...
+ar r VDecoupledGcd__ALL.a VDecoupledGcd__ALLcls.o VDecoupledGcd__ALLsup.o
+ranlib VDecoupledGcd__ALL.a
+clang++    DecoupledGcd-harness.o verilated.o verilated_vcd_c.o VDecoupledGcd__ALL.a    -o VDecoupledGcd -lm -lstdc++ 
+sim start on dhcp-46-76.EECS.Berkeley.EDU at Wed Jul 24 11:32:55 2019
+inChannelName: 00026068.in
+outChannelName: 00026068.out
+cmdChannelName: 00026068.cmd
+STARTING test_run_dir/gcd.GcdTestersRegression2106560942/VDecoupledGcd
+[[35minfo[0m] [0.000] SEED 1563993173490
+test vector size 10000
+:::::: testers gcd verilator                       2.76713 seconds
+Enabling waves..
+Exit Code: 0
+[[35minfo[0m] [2.774] RAN 175435 CYCLES PASSED
+[0m[[0m[0minfo[0m] [0m[0m[32mGcdTestersRegression:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mBasic test using Driver.execute[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be used as an alternative way to run specification[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32musing --backend-name verilator[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be an alternative way to run using verilator[0m[0m
+:::::: testers2 gcd treadle                        6.11894 seconds
+test DecoupledGcd Success: 0 tests passed in 175437 cycles in 6.149055 seconds 28530.73 Hz
+[[35minfo[0m] [0.000] Elaborating design...
+[[35minfo[0m] [0.024] Done elaborating.
+[[35minfo[0m] [0.000] Elaborating design...
+[[35minfo[0m] [0.004] Done elaborating.
+Total FIRRTL Compile Time: 52.7 ms
+cd /Users/chick/Adept/dev/masters/chisel-template/test_run_dir/run_tester2_regression_using_verilator && verilator --cc DecoupledGcd.v --assert -Wno-fatal -Wno-WIDTH -Wno-STMTDLY -O1 --top-module DecoupledGcd +define+TOP_TYPE=VDecoupledGcd +define+PRINTF_COND=!DecoupledGcd.reset +define+STOP_COND=!DecoupledGcd.reset -CFLAGS "-Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h" -Mdir /Users/chick/Adept/dev/masters/chisel-template/test_run_dir/run_tester2_regression_using_verilator --exe /Users/chick/Adept/dev/masters/chisel-template/test_run_dir/run_tester2_regression_using_verilator/DecoupledGcd-harness.cpp
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o DecoupledGcd-harness.o /Users/chick/Adept/dev/masters/chisel-template/test_run_dir/run_tester2_regression_using_verilator/DecoupledGcd-harness.cpp
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o verilated.o /usr/local/Cellar/verilator/4.016/share/verilator/include/verilated.cpp
+/usr/bin/perl /usr/local/Cellar/verilator/4.016/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include VDecoupledGcd.cpp > VDecoupledGcd__ALLcls.cpp
+/usr/bin/perl /usr/local/Cellar/verilator/4.016/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include VDecoupledGcd__Syms.cpp > VDecoupledGcd__ALLsup.cpp
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o VDecoupledGcd__ALLcls.o VDecoupledGcd__ALLcls.cpp
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o VDecoupledGcd__ALLsup.o VDecoupledGcd__ALLsup.cpp
+      Archiving VDecoupledGcd__ALL.a ...
+ar r VDecoupledGcd__ALL.a VDecoupledGcd__ALLcls.o VDecoupledGcd__ALLsup.o
+ranlib VDecoupledGcd__ALL.a
+clang++    DecoupledGcd-harness.o verilated.o VDecoupledGcd__ALL.a    -o VDecoupledGcd -lm -lstdc++ 
+sim start on dhcp-46-76.EECS.Berkeley.EDU at Wed Jul 24 11:33:01 2019
+inChannelName: 00026098.in
+outChannelName: 00026098.out
+cmdChannelName: 00026098.cmd
+STARTING test_run_dir/run_tester2_regression_using_verilator/VDecoupledGcd
+:::::: testers2 gcd verilator                      7.25960 seconds
+Exit Code: 0
+[0m[[0m[0minfo[0m] [0m[0m[32mGcdTesters2Regression:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Run testers2 regression using treadle[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- run tester2 regression using verilator[0m[0m
+:::::: testers2 gcd decoupled helpers treadle     11.73167 seconds
+test DecoupledGcd Success: 0 tests passed in 175438 cycles in 16.027214 seconds 10946.26 Hz
+[[35minfo[0m] [0.000] Elaborating design...
+[[35minfo[0m] [0.020] Done elaborating.
+[[35minfo[0m] [0.000] Elaborating design...
+[[35minfo[0m] [0.003] Done elaborating.
+Total FIRRTL Compile Time: 40.5 ms
+cd /Users/chick/Adept/dev/masters/chisel-template/test_run_dir/Run_testers2_regression_with_decpoupled_helpers_and_verilator && verilator --cc DecoupledGcd.v --assert -Wno-fatal -Wno-WIDTH -Wno-STMTDLY -O1 --top-module DecoupledGcd +define+TOP_TYPE=VDecoupledGcd +define+PRINTF_COND=!DecoupledGcd.reset +define+STOP_COND=!DecoupledGcd.reset -CFLAGS "-Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h" -Mdir /Users/chick/Adept/dev/masters/chisel-template/test_run_dir/Run_testers2_regression_with_decpoupled_helpers_and_verilator --exe /Users/chick/Adept/dev/masters/chisel-template/test_run_dir/Run_testers2_regression_with_decpoupled_helpers_and_verilator/DecoupledGcd-harness.cpp
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o DecoupledGcd-harness.o /Users/chick/Adept/dev/masters/chisel-template/test_run_dir/Run_testers2_regression_with_decpoupled_helpers_and_verilator/DecoupledGcd-harness.cpp
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o verilated.o /usr/local/Cellar/verilator/4.016/share/verilator/include/verilated.cpp
+/usr/bin/perl /usr/local/Cellar/verilator/4.016/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include VDecoupledGcd.cpp > VDecoupledGcd__ALLcls.cpp
+/usr/bin/perl /usr/local/Cellar/verilator/4.016/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include VDecoupledGcd__Syms.cpp > VDecoupledGcd__ALLsup.cpp
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o VDecoupledGcd__ALLcls.o VDecoupledGcd__ALLcls.cpp
+clang++  -I.  -MMD -I/usr/local/Cellar/verilator/4.016/share/verilator/include -I/usr/local/Cellar/verilator/4.016/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fbracket-depth=4096 -Qunused-arguments -Wno-parentheses-equality -Wno-sign-compare -Wno-uninitialized -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VDecoupledGcd -DVL_USER_FINISH -include VDecoupledGcd.h   -c -o VDecoupledGcd__ALLsup.o VDecoupledGcd__ALLsup.cpp
+      Archiving VDecoupledGcd__ALL.a ...
+ar r VDecoupledGcd__ALL.a VDecoupledGcd__ALLcls.o VDecoupledGcd__ALLsup.o
+ranlib VDecoupledGcd__ALL.a
+clang++    DecoupledGcd-harness.o verilated.o VDecoupledGcd__ALL.a    -o VDecoupledGcd -lm -lstdc++ 
+sim start on dhcp-46-76.EECS.Berkeley.EDU at Wed Jul 24 11:33:10 2019
+inChannelName: 00026128.in
+outChannelName: 00026128.out
+cmdChannelName: 00026128.cmd
+STARTING test_run_dir/Run_testers2_regression_with_decpoupled_helpers_and_verilator/VDecoupledGcd
+test vector size 10000
+:::::: testers2 gcd decoupled helpers verilator   12.12747 seconds
+Exit Code: 0
+[0m[[0m[0minfo[0m] [0m[0m[32mGcdTesters2:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Run testers2 regression with decpoupled helpers and treadle[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Run testers2 regression with decpoupled helpers and verilator[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mScalaTest[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 34 seconds, 545 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 6[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 3, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 6, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 6, Failed 0, Errors 0, Passed 6[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 40 s, completed Jul 24, 2019 11:33:25 AM[0m
