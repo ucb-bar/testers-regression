@@ -56,3 +56,6 @@ libraryDependencies ++= Seq("chisel3", "chisel-iotesters", "chiseltest").map {
 scalacOptions ++= scalacOptionsVersion(scalaVersion.value)
 
 javacOptions ++= javacOptionsVersion(scalaVersion.value)
+
+// do not require tests before building a fat JAR
+test in assembly := {}
