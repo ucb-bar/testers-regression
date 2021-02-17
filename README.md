@@ -12,6 +12,29 @@ Run the simple report script
 ./run_all.sh
 ```
 
+Creating Flamegraphs
+====================
+
+You will need copies of:
+- https://github.com/cykl/hprof2flamegraph
+- https://github.com/brendangregg/FlameGraph
+
+Now you can create a flame graph like this (only tested with OpenJDK 8,
+does not work with OpenJDK 11):
+
+```
+# build the JAR
+sbt assembly
+# sample function call stack while running the test
+java -agentlib:hprof=cpu=samples,depth=400,interval=100,lineno=y,thread=y,file=out.hprof -cp ./target/scala-2.12/testers-regression-assembly-3.2-SNAPSHOT.jar test.RunRegression io-testers treadle 5
+# convert to SVG
+../hprof2flamegraph/stackcollapse_hprof.py out.hprof > out-folded.txt
+../FlameGraph/flamegraph.pl out-folded.txt > out.svg
+# open the flamegraph
+firefox out.svg
+```
+
+
 ## License
 This is free and unencumbered software released into the public domain.
 
