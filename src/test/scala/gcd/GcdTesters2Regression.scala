@@ -5,8 +5,9 @@ package gcd
 import chisel3._
 import chisel3.tester._
 import chisel3.tester.experimental.TestOptionBuilder._
-import chisel3.tester.internal.VerilatorBackendAnnotation
-import org.scalatest.{FreeSpec, Matchers}
+import chiseltest.internal.VerilatorBackendAnnotation
+import org.scalatest.freespec.AnyFreeSpec
+import org.scalatest.matchers.should.Matchers
 
 class GcdTesters2RegressionTester(gcd: DecoupledGcd, testName: String) {
   /**
@@ -70,17 +71,17 @@ class GcdTesters2RegressionTester(gcd: DecoupledGcd, testName: String) {
   * }}}
   */
 //scalastyle:off magic.number
-class GcdTesters2Regression extends FreeSpec with ChiselScalatestTester with Matchers {
+class GcdTesters2Regression extends AnyFreeSpec with ChiselScalatestTester with Matchers {
 
 
   "Run testers2 regression using treadle" in {
-    test(new DecoupledGcd(width = 30)) { c =>
+    test(new DecoupledGcd(bitWidth = 30)) { c =>
       new GcdTesters2RegressionTester(c, testName = "testers2 gcd treadle")
       }
   }
 
   "run tester2 regression using verilator" in {
-    test(new DecoupledGcd(width = 30)).withAnnotations(Seq(VerilatorBackendAnnotation)) { c =>
+    test(new DecoupledGcd(bitWidth = 30)).withAnnotations(Seq(VerilatorBackendAnnotation)) { c =>
       new GcdTesters2RegressionTester(c, testName = "testers2 gcd verilator")
     }
   }
