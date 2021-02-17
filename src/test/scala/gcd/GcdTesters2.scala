@@ -3,11 +3,11 @@
 package gcd
 
 import chisel3._
-import chisel3.tester._
+import chiseltest._
 import chisel3.tester.experimental.TestOptionBuilder._
-import org.scalatest.FreeSpec
 import chisel3.experimental.BundleLiterals._
-import chisel3.tester.internal.VerilatorBackendAnnotation
+import chiseltest.internal.VerilatorBackendAnnotation
+import org.scalatest.freespec.AnyFreeSpec
 
 /**
   * This is a trivial example of how to run this Specification
@@ -21,7 +21,7 @@ import chisel3.tester.internal.VerilatorBackendAnnotation
   * }}}
   */
 //scalastyle:off magic.number
-class GcdTesters2 extends FreeSpec with ChiselScalatestTester {
+class GcdTesters2 extends AnyFreeSpec with ChiselScalatestTester {
 
   def runTest(dut: DecoupledGcd, testName: String): Unit = {
     dut.input.initSource()

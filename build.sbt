@@ -32,23 +32,25 @@ version := "3.2-SNAPSHOT"
 
 scalaVersion := "2.12.6"
 
-crossScalaVersions := Seq("2.11.12", "2.12.6")
+crossScalaVersions := Seq("2.12.6")
 
 resolvers ++= Seq(
   Resolver.sonatypeRepo("snapshots"),
   Resolver.sonatypeRepo("releases")
 )
 
+addCompilerPlugin("edu.berkeley.cs" % "chisel3-plugin" % "3.5-SNAPSHOT" cross CrossVersion.full)
+
 addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
 
 // Provide a managed dependency on X if -DXVersion="" is supplied on the command line.
 val defaultVersions = Map(
-  "chisel3" -> "3.2-SNAPSHOT",
-  "chisel-iotesters" -> "1.3-SNAPSHOT",
-  "chisel-testers2"  -> "0.1-SNAPSHOT"
+  "chisel3" -> "3.5-SNAPSHOT",
+  "chisel-iotesters" -> "2.5-SNAPSHOT",
+  "chiseltest"  -> "0.5-SNAPSHOT"
   )
 
-libraryDependencies ++= Seq("chisel3", "chisel-iotesters", "chisel-testers2").map {
+libraryDependencies ++= Seq("chisel3", "chisel-iotesters", "chiseltest").map {
   dep: String => "edu.berkeley.cs" %% dep % sys.props.getOrElse(dep + "Version", defaultVersions(dep)) }
 
 scalacOptions ++= scalacOptionsVersion(scalaVersion.value)
